@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FullPage</title>
+
+    <!--<script src="https://https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css" integrity="sha512-wCVOuVtxsXqrQK7tj9j4BvyfITQmpp7UE7mVilD7aieGLYFEIAa5UKTP1RapOf6dxQ9JIKAneakcyykWG4r4Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <style>
+        div .section{
+            font-family: "Poor Richard", serif;
+            margin:0;
+            text-align: center;
+            font-size: 140%;
+        }
+        p{
+            opacity:0
+        }
+        h1{
+            opacity:0;
+            font-size: 300%;
+        }
+        input{
+            opacity:0;
+            border-radius: 64px 64px 64px 64px;
+            border: 11px solid #daaa66;
+        }
+    </style>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section" id="section1">
+        <h1>About Me</h1>
+        <input type="image" id="image" alt="Login" src="Untitled.png" onclick="shakeIt()"/>
+        <p>My name is <span style="color: #daaa66">Ais</span></p>
+        <p>I am a graphic designer, aged 18</p>
+        <p>I have the incessant need to break my spine in order to reset it to it's most powerful form </p>
+        <p>I am what happens when a mortician doesn't become a mortician because he cannot fathom smelling a rotting corpse</p>
+        <p>Thank you...</p>
+    </div>
+    <div class="section" id="section2">
+        <h1>Contact Me</h1>
+        <p><a href="mailto:itisjustaisyah@gmail.com">itisjustaisyah@gmail.com</a></p>
+        <p>65+ 1234 5678</p>
+    </div>
+</div>
+
+
+
+
+<script>
+    var animationEnter = anime({
+        targets: ['h1', 'p', 'input'],
+        opacity: 1,
+        translateY: [-30, 0],
+        delay: anime.stagger(100, {start: 500})
+    });
+
+    function shakeIt() {
+        anime({
+            targets: ['input'],
+            rotate: [360,0],
+        });
+    }
+
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdpage'],
+        navigationTooltips: ['First page', 'Second page', '3rdpage'],
+        sectionsColor: ['#C63D0F', '#daaa66', '#7dda49'],
+        continuousVertical: true,
+
+        afterLoad: function(origin, destination, direction, trigger) {
+            animationEnter.play();
+        },
+        beforeLeave: function(origin, destination, direction, trigger) {
+            animationEnter.restart();
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

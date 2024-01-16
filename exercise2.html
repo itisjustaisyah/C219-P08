@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FullPage</title>
+
+    <!--<script src="https://https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css" integrity="sha512-wCVOuVtxsXqrQK7tj9j4BvyfITQmpp7UE7mVilD7aieGLYFEIAa5UKTP1RapOf6dxQ9JIKAneakcyykWG4r4Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        div .section{
+            font-family: "Poor Richard", serif;
+            font-size: 150%;
+            margin:0;
+            text-align: center;
+        }
+        div .slide{
+            font-family: "Poor Richard", serif;
+            font-size: 150%;
+            margin:0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section" id="section1">
+        <h1>Section 1</h1>
+        <p>My name is <span style="color: #daaa66">Ais</span></p>
+        <p>I am a graphic designer, aged 18</p>
+        <p>I have the incessant need to break my spine in order to reset it to it's most powerful form </p>
+        <p>I am what happens when a mortician doesn't become a mortician because he cannot fathom smelling a rotting corpse</p>
+        <p>Thank you...</p>
+    </div>
+    <div class="section" id="section2">
+        <h1>Section 2</h1>
+    </div>
+    <div class="section" id="section3" style="padding: 10px">
+        <h1>Section 3</h1>
+        <div class="slide">
+            <p>slide One</p>
+        </div>
+        <div class="slide">
+            <p>slide two</p>
+        </div>
+        <div class="slide">
+            <p>slide three</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+        sectionsColor: ['#C63D0F', '#daaa66', '#7dda49'],
+        continuousVertical: true,
+    });
+</script>
+
+
+
+</body>
+</html>

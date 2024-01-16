@@ -1,0 +1,87 @@
+<?php?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+    <style type="text/css">
+        p{font-family: "Comic Sans MS",sans-serif;font-size:16px}
+    </style>
+    <script src="https://https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <style>
+        .topnav{
+            overflow: hidden;
+            font-family: "Comic Sans MS", sans-serif;
+            background-color: #7fe8e8;
+        }
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.main {
+            background-color: #2871fa;
+            color: white;
+        }
+        .topnav a.active {
+        }
+        .topnav a.disabled {
+            opacity: 50%;
+        }
+        p{
+            opacity: 0;
+        }
+        img{
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+#TODO add counter
+<div class="topnav">
+    <a class="main" href="exercise1.php">Home</a>
+    <a class="active" href="myFaveFood.php">Fave Food</a>
+    <a class="disabled" href="#disabled">Fave Movie</a>
+    <a class="disabled" href="#disabled">Funny Cats</a>
+    <a class="disabled" href="#disabled">How To Make A PipeBomb</a>
+</div>
+<img src="Untitled.png" height="400" alt="A small guy, with weird brown hair, he has a thumbs up close to teh viewer" style="
+display: block;
+margin-left: auto;
+margin-right: auto;
+">
+<p>My name is <span style="color: crimson">Ais</span></p>
+<p>I am a graphic designer, aged 18</p>
+<p>I have the incessant need to break my spine in order to reset it to it's most powerful form </p>
+<p>I am what happens when a mortician doesn't become a mortician because he cannot fathom smelling a rotting corpse</p>
+<p>Thank you...</p>
+
+<script>
+    anime({
+        targets: 'p, img',
+        opacity: 1,
+        translateY: [-30, 0],
+        delay: anime.stagger(100, {start: 500})
+    });
+    anime({
+        targets: '.topnav a',
+        translateY: [-100, 0],
+        delay: anime.stagger(100, {start: 500})
+    });
+</script>
+</body>
+</html>
